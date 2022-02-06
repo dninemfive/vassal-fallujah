@@ -1,0 +1,1 @@
+See [CONTRIBUTING.md](https://github.com/dninemfive/CMPM-176-Project-B/blob/main/CONTRIBUTING.md) and the [Projects tab](https://github.com/dninemfive/CMPM-176-Project-B/projects) for details.
