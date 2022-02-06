@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<VASSAL.build.GameModule ModuleOther1="" ModuleOther2="" VassalVersion="3.6.4" description="Designed by Tom Russell, published by Hollandspiele" name="Table Battles" nextPieceSlotId="94" version="1.0">
+    <VASSAL.build.module.BasicCommandEncoder/>
+    <VASSAL.build.module.Documentation>
+        <VASSAL.build.module.documentation.AboutScreen fileName="/images/Splash.png" title="About Module"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="/help/Intro.html" fileType="resource" title="Quick Start"/>
+    </VASSAL.build.module.Documentation>
+    <VASSAL.build.module.PlayerRoster buttonKeyStroke="" buttonText="Retire" buttonToolTip="Allow another player to take your side in this game">
+        <entry>Red</entry>
+        <entry>Blue</entry>
+    </VASSAL.build.module.PlayerRoster>
+    <VASSAL.build.module.GlobalOptions autoReport="Always" centerOnMove="Always" chatterHTMLSupport="Never" hotKeysOnClosedWindows="Never" nonOwnerUnmaskable="Never" playerIdFormat="$PlayerName$" promptString="Opponents can unmask my pieces">
+        <option name="stepIcon">/images/StepForward16.gif</option>
+        <option name="stepHotKey">34,0</option>
+        <option name="undoIcon">/images/Undo16.gif</option>
+        <option name="undoHotKey"/>
+        <option name="serverControlsIcon">/images/connect.gif</option>
+        <option name="serverControlsHotKey">83,520</option>
+        <option name="debugControlsIcon"/>
+        <option name="debugControlsHotKey"/>
+    </VASSAL.build.module.GlobalOptions>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="Map" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hideKey="" hotkey="" icon="" launch="false" mapName="Main Map" markMoved="Always" markUnmovedHotkey="" markUnmovedIcon="/images/unmoved.gif" markUnmovedReport="" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" showKey="" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <setup>Main MapBoardPicker	Main board	0	0</setup>
+            <VASSAL.build.module.map.boardPicker.Board image="Board.png" name="Main board" reversible="false"/>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" canDisable="false" hotkey="" icon="/images/camera.gif" propertyGate="" tooltip="Save Map as PNG image"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" centerAll="false" centerText="false" combineCounterSummary="false" counterReportFormat="" delay="700" description="" display="from top-most layer only" emptyHexReportForma="$LocationName$" enableHTML="false" extraTextPadding="0" fgColor="0,0,0" fontSize="9" graphicsZoom="0.5" hotkey="32,130" layerList="" minDisplayPieces="1" propertyFilter="" showDeck="true" showDeckDepth="1" showDeckMasked="false" showMoveSelectde="true" showNoStack="true" showNonMovable="false" showOverlap="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" stretchWidthSummary="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="3" verticalOffset="0" verticalTopText="5" zoomlevel="1.0"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+        <VASSAL.build.module.map.Zoomer inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" pickButtonText="" pickIconName="/images/zoom.png" pickTooltip="Select Zoom" zoomInKey="" zoomLevels="0.25,0.390625,0.625,1.0,1.6" zoomOutKey="" zoomPickKey="" zoomStart="5"/>
+        <VASSAL.build.module.map.Flare circleColor="255,0,0" circleScale="true" circleSize="100" flareKey="keyAlt" flareName="Map Flare" flarePulses="6" flarePulsesPerSec="3" reportFormat=""/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+        <VASSAL.build.module.gamepieceimage.ColorManager/>
+        <VASSAL.build.module.gamepieceimage.FontManager>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="Default" style="Dialog,0,12,false"/>
+        </VASSAL.build.module.gamepieceimage.FontManager>
+        <VASSAL.build.module.gamepieceimage.GamePieceLayoutsContainer/>
+    </VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+    <VASSAL.build.module.properties.GlobalProperties/>
+    <VASSAL.build.module.PrototypesContainer>
+        <VASSAL.build.module.PrototypeDefinition description="" name="Basic formation card - red">+/null/delete;Remove;68,130	emb2;Activate;2;;;2;;;2;;;;1;false;-280;-370;Button.png;;false;Button_image;;;false;;1;1;true;65,130;;\	button;45,130;-300;-370;40;40;Down\\	button;61,130;-300;-410;40;40;Up\\\	immob;i;I\\\\	emb2;Activate;2;;Increase strength;2;;Decrease strength;2;;;;1;false;0;-400;Red 1.png,Red 2.png,Red 3.png,Red 4.png,Red 5.png,Red 6.png,Red 7.png,Red 8.png,;Red1,Red2,Red3,Red4,Red5,Red6,Red7,Red8,;true;Strength;;;false;;1;1;true;65,130;61,130;45,130\\\\\	report;68\,130;$PlayerName$ removed a unit;;;Remove\\\\\\	report;45\,130;$PlayerName$ took a hit;;;Hits down\\\\\\\	report;61\,130;$PlayerName$ added a strength point;;;Hits up\\\\\\\\	piece;;;;/	1\	\\	\\\	\\\\	1\\\\\	-1\\\\\\	-1\\\\\\\	-1\\\\\\\\	null;264;205;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition description="" name="Basic formation card - pink">+/null/delete;Remove;68,130	emb2;Activate;2;;;2;;;2;;;;1;false;-280;-370;Button.png;;false;Button_image;;;false;;1;1;true;65,130;;\	button;45,130;-300;-370;40;40;Down\\	button;61,130;-300;-410;40;40;Up\\\	immob;i;I\\\\	emb2;Activate;2;;Increase strength;2;;Decrease strength;2;;;;1;false;0;-400;Pink 1.png,Pink 2.png,Pink 3.png,Pink 4.png,Pink 5.png,Pink 6.png,Pink 7.png,Pink 8.png,;Pink1,Pink2,Pink3,Pink4,Pink5,Pink6,Pink7,Pink8,;true;Strength;;;false;;1;1;true;65,130;61,130;45,130\\\\\	report;68\,130;$PlayerName$ removed a unit;;;Remove\\\\\\	report;45\,130;$PlayerName$ took a hit;;;Hits down\\\\\\\	report;61\,130;$PlayerName$ added a strength point;;;Hits up\\\\\\\\	piece;;;;/	1\	\\	\\\	\\\\	1\\\\\	-1\\\\\\	-1\\\\\\\	-1\\\\\\\\	null;264;205;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition description="" name="Basic formation card - blue">+/null/delete;Remove;68,130	emb2;Activate;2;;;2;;;2;;;;1;false;-280;-370;Button.png;;false;Button_image;;;false;;1;1;true;65,130;;\	button;45,130;-300;-370;40;40;Down\\	button;61,130;-300;-410;40;40;Up\\\	immob;i;I\\\\	emb2;Activate;2;;Increase strength;2;;Decrease strength;2;;;;1;false;0;-400;Blue 1.png,Blue 2.png,Blue 3.png,Blue 4.png,Blue 5.png,Blue 6.png,Blue 7.png,Blue 8.png,;Blue1,Blue2,Blue3,Blue4,Blue5,Blue6,Blue7,Blue8,;true;Strength;;;false;;1;1;true;65,130;61,130;45,130\\\\\	report;68\,130;$PlayerName$ removed a unit;;;Remove\\\\\\	report;45\,130;$PlayerName$ took a hit;;;Hits down\\\\\\\	report;61\,130;$PlayerName$ added a strength point;;;Hits up\\\\\\\\	piece;;;;/	1\	\\	\\\	\\\\	1\\\\\	-1\\\\\\	-1\\\\\\\	-1\\\\\\\\	null;264;205;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition description="" name="Basic formation card - light blue">+/null/delete;Remove;68,130	emb2;Activate;2;;;2;;;2;;;;1;false;-280;-370;Button.png;;false;Button_image;;;false;;1;1;true;65,130;;\	button;45,130;-300;-370;40;40;Down\\	button;61,130;-300;-410;40;40;Up\\\	immob;i;I\\\\	emb2;Activate;2;;Increase strength;2;;Decrease strength;2;;;;1;false;0;-400;Cyan 1.png,Cyan 2.png,Cyan 3.png,Cyan 4.png,Cyan 5.png,Cyan 6.png,Cyan 7.png,Cyan 8.png,;LBlue1,LBlue2,LBlue3,LBlue4,LBlue5,LBlue6,LBlue7,LBlue8,;true;Strength;;;false;;1;1;true;65,130;61,130;45,130\\\\\	report;68\,130;$PlayerName$ removed a unit;;;Remove\\\\\\	report;45\,130;$PlayerName$ took a hit;;;Hits down\\\\\\\	report;61\,130;$PlayerName$ added a strength point;;;Hits up\\\\\\\\	piece;;;;/	1\	\\	\\\	\\\\	1\\\\\	-1\\\\\\	-1\\\\\\\	-1\\\\\\\\	null;264;205;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition description="" name="Basic formation card - special">+/null/delete;Remove;68,130	emb2;Activate;2;;;2;;;2;;;;1;false;-280;-370;Button.png;;false;Button_image;;;false;;1;1;true;65,130;;\	button;45,130;-300;-370;40;40;Down\\	button;61,130;-300;-410;40;40;Up\\\	immob;i;I\\\\	emb2;Activate;2;;Increase strength;2;;Decrease strength;2;;;;1;false;0;-380;,Wood new.png,Wood 2.png,Wood 3.png;None,1cube,2cube,3cube;true;Strength;;;false;;1;1;true;65,130;61,130;45,130\\\\\	report;68\,130;$PlayerName$ removed a unit;;;Remove\\\\\\	report;45\,130;$PlayerName$ expended a cube;;;Hits down\\\\\\\	report;61\,130;$PlayerName$ added a cube;;;Hits up\\\\\\\\	piece;;;;/	1\	\\	\\\	\\\\	1\\\\\	-1\\\\\\	-1\\\\\\\	-1\\\\\\\\	null;257;205;</VASSAL.build.module.PrototypeDefinition>
+    </VASSAL.build.module.PrototypesContainer>
+    <VASSAL.build.module.PieceWindow defaultWidth="0" hidden="false" hotkey="" icon="" scale="1.0" text="Pieces" tooltip="Show/Hide the null window">
+        <VASSAL.build.widget.ListWidget divider="381" entryName="Pieces" height="0" scale="1.0" width="0">
+            <VASSAL.build.widget.PanelWidget entryName="Other" fixed="false" nColumns="3" scale="1.0" vert="false">
+                <VASSAL.build.widget.PieceSlot entryName="Die" gpid="0" height="104" width="104">+/null/emb2;Activate;2;;;2;;;2;;;;1;false;0;0;1.png,2.png,3.png,4.png,5.png,6.png;1,2,3,4,5,6;false;Dieroll;82,130;Roll die;false;;1;1;true;65,130;;;;1.0	piece;;;;Die/1	null;0;0;0;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Morale cube" gpid="3" height="40" width="40">+/null/delete;Delete;68,130;	piece;;;Wood new.png;Morale cube/	null;0;0;3;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.PanelWidget>
+            <VASSAL.build.widget.ListWidget divider="276" entryName="Cards - White Mountain" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="01-A" gpid="5" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;01-A.png;01-A/	null;0;0;5;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="02-A" gpid="16" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;02-A.png;02-A/	null;0;0;16;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="03-A" gpid="7" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;03-A.png;03-A/	null;0;0;7;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="04-A" gpid="8" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;04-A.png;04-A/	null;0;0;8;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="05-A" gpid="9" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;05-A.png;05-A/	null;0;0;9;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="06-A" gpid="10" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;06-A.png;06-A/	null;0;0;10;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="07-A" gpid="11" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;07-A.png;07-A/	null;0;0;11;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="08-A" gpid="12" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;08-A.png;08-A/	null;0;0;12;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="09-A" gpid="13" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;09-A.png;09-A/	null;0;0;13;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="10-A" gpid="14" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;10-A.png;10-A/	null;0;0;14;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+            <VASSAL.build.widget.ListWidget divider="254" entryName="Cards - Marston Moor" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="11-A" gpid="18" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;11-A.png;11-A/	null;0;0;18;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="12-A" gpid="19" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;12-A.png;12-A/	null;0;0;19;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="13-A" gpid="20" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;13-A.png;13-A/	null;0;0;20;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="14-A" gpid="21" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;14-A.png;14-A/	null;0;0;21;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="15-A" gpid="22" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;15-A.png;15-A/	null;0;0;22;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="16-A" gpid="23" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;16-A.png;16-A/	null;0;0;23;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="17-A" gpid="24" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;17-A.png;17-A/	null;0;0;24;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="18-A" gpid="25" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;18-A.png;18-A/	null;0;0;25;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="19-A" gpid="26" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;19-A.png;19-A/	null;0;0;26;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="20-A" gpid="27" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;20-A.png;20-A/	null;0;0;27;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="21-A" gpid="28" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;21-A.png;21-A/	null;0;0;28;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="22-A" gpid="29" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;22-A.png;22-A/	null;0;0;29;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="23-A" gpid="30" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;23-A.png;23-A/	null;0;0;30;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="24-A" gpid="31" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;24-A.png;24-A/	null;0;0;31;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+            <VASSAL.build.widget.ListWidget divider="-1" entryName="Cards - Plains of Abraham" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="25-A" gpid="33" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;25-A.png;25-A/	null;0;0;33;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="26-A" gpid="34" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;26-A.png;26-A/	null;0;0;34;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="27-A" gpid="35" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;27-A.png;27-A/	null;0;0;35;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="28-A" gpid="36" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;28-A.png;28-A/	null;0;0;36;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="29-A" gpid="37" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;29-A.png;29-A/	null;0;0;37;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="30-A" gpid="38" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;30-A.png;30-A/	null;0;0;38;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="31-A" gpid="39" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;31-A.png;31-A/	null;0;0;39;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="32-A" gpid="40" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;32-A.png;32-A/	null;0;0;40;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+            <VASSAL.build.widget.ListWidget divider="-1" entryName="Cards - Bosworth" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="33-A" gpid="41" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;33-A.png;33-A/	null;0;0;41;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="34-A" gpid="42" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;34-A.png;34-A/	null;0;0;42;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="35-A" gpid="43" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;35-A.png;35-A/	null;0;0;43;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="36-A" gpid="44" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;36-A.png;36-A/	null;0;0;44;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="37-A" gpid="45" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;37-A.png;37-A/	null;0;0;45;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="38-A" gpid="46" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;38-A.png;38-A/	null;0;0;46;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+            <VASSAL.build.widget.ListWidget divider="-1" entryName="Cards - Malplaquet" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="01-B" gpid="47" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;01-B.png;01-B/	null;0;0;47;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="02-B" gpid="48" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;02-B.png;02-B/	null;0;0;48;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="03-B" gpid="49" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;03-B.png;03-B/	null;0;0;49;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="04-B" gpid="50" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;04-B.png;04-B/	null;0;0;50;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="05-B" gpid="51" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;05-B.png;05-B/	null;0;0;51;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="06-B" gpid="52" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;06-B.png;06-B/	null;0;0;52;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="39-A" gpid="53" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;39-A.png;39-A/	null;0;0;53;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="40-A" gpid="54" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;40-A.png;40-A/	null;0;0;54;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="41-A" gpid="55" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;41-A.png;41-A/	null;0;0;55;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="42-A" gpid="56" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;42-A.png;42-A/	null;0;0;56;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+            <VASSAL.build.widget.ListWidget divider="-1" entryName="Cards - Ivry" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="07-B" gpid="57" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;07-B.png;07-B/	null;0;0;57;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="08-B" gpid="58" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;08-B.png;08-B/	null;0;0;58;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="09-B" gpid="59" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;09-B.png;09-B/	null;0;0;59;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="10-B" gpid="60" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;10-B.png;10-B/	null;0;0;60;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="11-B" gpid="61" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;11-B.png;11-B/	null;0;0;61;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="12-B" gpid="62" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;12-B.png;12-B/	null;0;0;62;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="13-B" gpid="63" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;13-B.png;13-B/	null;0;0;63;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="14-B" gpid="64" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;14-B.png;14-B/	null;0;0;64;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="15-B" gpid="65" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;15-B.png;15-B/	null;0;0;65;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="16-B" gpid="66" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;16-B.png;16-B/	null;0;0;66;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="17-B" gpid="67" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;17-B.png;17-B/	null;0;0;67;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="18-B" gpid="68" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;18-B.png;18-B/	null;0;0;68;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="19-B" gpid="69" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;19-B.png;19-B/	null;0;0;69;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="20-B" gpid="70" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;20-B.png;20-B/	null;0;0;70;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+            <VASSAL.build.widget.ListWidget divider="-1" entryName="Cards - The Dunes" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="21-B" gpid="71" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;21-B.png;21-B/	null;0;0;71;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="22-B" gpid="72" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;22-B.png;22-B/	null;0;0;72;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="23-B" gpid="73" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;23-B.png;23-B/	null;0;0;73;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="24-B" gpid="74" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;24-B.png;24-B/	null;0;0;74;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="25-B" gpid="75" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;25-B.png;25-B/	null;0;0;75;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="26-B" gpid="76" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;26-B.png;26-B/	null;0;0;76;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="27-B" gpid="77" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;27-B.png;27-B/	null;0;0;77;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="28-B" gpid="78" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;28-B.png;28-B/	null;0;0;78;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="29-B" gpid="79" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;29-B.png;29-B/	null;0;0;79;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="30-B" gpid="80" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;30-B.png;30-B/	null;0;0;80;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="31-B" gpid="81" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;31-B.png;31-B/	null;0;0;81;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="32-B" gpid="82" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;32-B.png;32-B/	null;0;0;82;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="33-B" gpid="83" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;33-B.png;33-B/	null;0;0;83;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="34-B" gpid="84" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;34-B.png;34-B/	null;0;0;84;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="35-B" gpid="85" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;35-B.png;35-B/	null;0;0;85;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+            <VASSAL.build.widget.ListWidget divider="-1" entryName="Cards - Brooklyn Heights" height="0" scale="1.0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="36-B" gpid="86" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;36-B.png;36-B/	null;0;0;86;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="37-B" gpid="87" height="760" width="550">+/null/prototype;Basic formation card - red	piece;;;37-B.png;37-B/	null;0;0;87;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="38-B" gpid="88" height="760" width="550">+/null/prototype;Basic formation card - pink	piece;;;38-B.png;38-B/	null;0;0;88;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="39-B" gpid="89" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;39-B.png;39-B/	null;0;0;89;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="40-B" gpid="90" height="760" width="550">+/null/prototype;Basic formation card - light blue	piece;;;40B.png;40-B/	null;0;0;90;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="41-B" gpid="91" height="760" width="550">+/null/prototype;Basic formation card - special	piece;;;41-B.png;41-B/	null;0;0;91;0</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="42-B" gpid="92" height="760" width="550">+/null/prototype;Basic formation card - blue	piece;;;42-B.png;42-B/	null;0;0;92;0</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+        </VASSAL.build.widget.ListWidget>
+    </VASSAL.build.module.PieceWindow>
+    <VASSAL.build.module.Chatter/>
+    <VASSAL.i18n.Language/>
+    <VASSAL.build.module.PredefinedSetup file="Basic_setup.vsav" isMenu="false" name="Blank setup" useFile="true"/>
+    <VASSAL.build.module.PredefinedSetup isMenu="true" name="Table Battles" useFile="true">
+        <VASSAL.build.module.PredefinedSetup file="01_White_Mountain.vsav" isMenu="false" name="White Mountain" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="02_Marston_Moor.vsav" isMenu="false" name="Marston Moor" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="03_Plains_of_Abraham.vsav" isMenu="false" name="Plains of Abraham" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="04_Bosworth.vsav" isMenu="false" name="Bosworth" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="05_Malplaquet.vsav" isMenu="false" name="Malplaquet" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="06_Ivry.vsav" isMenu="false" name="Ivry" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="07_The_Dunes_new.vsav" isMenu="false" name="The Dunes" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="08_Brooklyn_Heights_new.vsav" isMenu="false" name="Brooklyn Heights" useFile="true"/>
+    </VASSAL.build.module.PredefinedSetup>
+    <VASSAL.build.module.properties.GlobalTranslatableMessages/>
+    <VASSAL.build.module.KeyNamer/>
+</VASSAL.build.GameModule>
