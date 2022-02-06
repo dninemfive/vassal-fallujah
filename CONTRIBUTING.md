@@ -1,0 +1,3 @@
+See the tutorials in the Canvas assignment for anything (Modules/Week 5/✏️ Project B: Table Battles System Design) which is unclear here.
+
+To edit the project, open `TableBattlesFallujah.vmod` with VASSAL's `File>Edit...` command. Make your changes. Save as `TableBattlesFallujah.vmod` and run `unzip_for_github.py` so we can track changes. The `.gitignore` file will ignore anything irrelevant included in the .vmod save, so don't worry about only committing specific files. You will need Python installed to run this, but running it isn't that big of a deal as long as you tell someone with Python that you're committing so they can run it themselves.
